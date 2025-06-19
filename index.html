@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3 AI Profile Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.1.3/24/outline/hero-icons.min.css" integrity="sha512-MatZkZ1M_AUIKF3qPStLsqfLhsHR+G2Lgwd6fJTDjOcIZb5S2LsQ3rQ7Kk2Opxi2XfOEVA2fXz3Nwn3Jj2n0Iw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "wagmi": "https://esm.sh/wagmi@^2.12.1",
+    "wagmi/": "https://esm.sh/wagmi@^2.12.1/",
+    "viem": "https://esm.sh/viem@^2.18.7",
+    "viem/": "https://esm.sh/viem@^2.18.7/",
+    "@web3modal/wagmi": "https://esm.sh/@web3modal/wagmi@5.1.1",
+    "@web3modal/wagmi/": "https://esm.sh/@web3modal/wagmi@5.1.1/",
+    "@tanstack/react-query": "https://esm.sh/@tanstack/react-query@^5.51.15",
+    "alchemy-sdk": "https://esm.sh/alchemy-sdk@3.3.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+  <div id="root"></div>
+  <script type="module">
+    // --- START WALLETCONNECT PROJECT ID ---
+    // IMPORTANT: You MUST obtain your own Project ID from https://cloud.walletconnect.com
+    // The application WILL NOT WORK correctly with wallets without YOUR OWN valid Project ID.
+    // Replace 'YOUR_WALLETCONNECT_PROJECT_ID' below with your actual ID.
+    window.ENV = {
+      WALLETCONNECT_PROJECT_ID: 'YOUR_WALLETCONNECT_PROJECT_ID' 
+    };
+
+    if (window.ENV.WALLETCONNECT_PROJECT_ID === 'YOUR_WALLETCONNECT_PROJECT_ID') {
+        // This is a common PUBLIC TEST ID. 
+        // It is NOT reliable for development or production and may be rate-limited or disabled by WalletConnect.
+        // It may result in "Project not found" errors or other connection issues.
+        // PLEASE USE YOUR OWN PROJECT ID FROM https://cloud.walletconnect.com
+        window.ENV.WALLETCONNECT_PROJECT_ID = '70b2245473d89866eb4bd4ebdc3c7215';
+    }
+    // --- END WALLETCONNECT PROJECT ID ---
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

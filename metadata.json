@@ -1,0 +1,5 @@
+{
+  "name": "Web3 AI Profile Generator",
+  "description": "A React application that helps users create a Web3 profile and generate an AI-powered summary using the Gemini API. Users can input their details and download their generated profile.",
+  "requestFramePermissions": []
+}
